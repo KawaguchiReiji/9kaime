@@ -86,22 +86,40 @@
           scene.add(sprite1);
         }
 
-        // 星をスプライトで作成
+        // 木2をスプライトで作成
         var textureLoader2 = new THREE.TextureLoader();  
-        var texture2 = textureLoader.load("img/star.png");
+        var texture2 = textureLoader.load("img/tree2.png");
         const material2 = new THREE.SpriteMaterial({ map: texture2,});
 
-        // 星空を作成
+        // 森を作成
         for (let i = 0; i < 20; i++) {
           const sprite2 = new THREE.Sprite(material2);
           // ランダムな座標に配置
           sprite2.position.x = 2 * (Math.random() - 0.5);
-          sprite2.position.y = 0.5 * (Math.random()+3);
+          sprite2.position.y = 0.5 * (Math.random());
           sprite2.position.z = 2 * (Math.random() - 0.5);
           // スケールを調整
-          sprite2.scale.set(0.08, 0.08, 0.08);
+          sprite2.scale.set(0.5, 0.5, 0.5);
 
           scene.add(sprite2);
+        }
+
+        // 星をスプライトで作成
+        var textureLoader3 = new THREE.TextureLoader();  
+        var texture3 = textureLoader.load("img/star.png");
+        const material3 = new THREE.SpriteMaterial({ map: texture3,});
+
+        // 星空を作成
+        for (let i = 0; i < 20; i++) {
+          const sprite3 = new THREE.Sprite(material3);
+          // ランダムな座標に配置
+          sprite3.position.x = 2 * (Math.random() - 0.5);
+          sprite3.position.y = 0.5 * (Math.random()+3);
+          sprite3.position.z = 2 * (Math.random() - 0.5);
+          // スケールを調整
+          sprite3.scale.set(0.08, 0.08, 0.08);
+
+          scene.add(sprite3);
         }
 
         
