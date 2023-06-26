@@ -69,7 +69,7 @@
         }
 
         // 木1をスプライトで作成
-        var textureLoader = new THREE.TextureLoader();  
+        var textureLoader1 = new THREE.TextureLoader();  
         var texture1 = textureLoader.load("img/tree1.png");
         const material1 = new THREE.SpriteMaterial({ map: texture1,});
 
@@ -83,7 +83,7 @@
           // スケールを調整
           sprite1.scale.set(0.5, 0.5, 0.5);
 
-          scene1.add(sprite);
+          scene.add(sprite1);
         }
 
         
